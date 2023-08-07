@@ -12,10 +12,10 @@ export default function Film(props) {
     axios
       .get(`http://localhost:5001/api/filmler/${id}`) // Bu uç noktayı Postman'le çalışın
       .then(response => {
-          // Bu kısmı log statementlarıyla çalışın
-          console.log("film js içindeki response : ",response)
-          // ve burdan gelen response'u 'movie' e aktarın
-          setMovie(response.data);
+        // Bu kısmı log statementlarıyla çalışın
+        console.log("film js içindeki response : ", response)
+        // ve burdan gelen response'u 'movie' e aktarın
+        setMovie(response.data);
       })
       .catch(error => {
         console.error(error);
@@ -25,7 +25,9 @@ export default function Film(props) {
   }, [id]);
 
   // Yalnızca esnek görevlere geçtiğinizde burdaki yorum etiketini kaldırın
-  // const filmiKaydet = evt => { }
+  // const filmiKaydet = evt => { 
+    
+  // }
 
   if (!movie) {
     return <div>Film bilgisi yükleniyor...</div>;
