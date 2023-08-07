@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useParams } from 'react-router-dom/';
 
 export default function Film(props) {
   const [movie, setMovie] = useState();
-
-  let id = props.id;
+  const params = useParams()
+  let id = params.id;
   // URL'den alınan :id parametresini bu değişkene aktarın
 
   useEffect(() => {
